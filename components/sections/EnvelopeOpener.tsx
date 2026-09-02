@@ -13,7 +13,7 @@ export default function EnvelopeOpener({ onOpen }: EnvelopeOpenerProps) {
   useEffect(() => {
     if (isOpening) {
       // Play subtle music
-      const audio = new Audio('/RIC-SOUND-MUSIC-Dear-lord.mp3');
+      const audio = new Audio('/young-and-beautiful.mp3');
       audio.volume = 0.3;
       audio.play().catch(() => {
         // Audio might not be available or user hasn't interacted with page
