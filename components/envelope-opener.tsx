@@ -11,6 +11,18 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [guestPrefix, setGuestPrefix] = useState('');
+  const [guestName, setGuestName] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const p = params.get('p');
+      const n = params.get('n');
+      if (p) setGuestPrefix(p);
+      if (n) setGuestName(n);
+    }
+  }, []);
 
   const handleEnvelopeClick = () => {
     if (isAnimating || isOpen) return;
@@ -196,9 +208,20 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
               </div>
-              <p className="text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
-                Unveil the moment
-              </p>
+              {guestName ? (
+                <div className="mt-4 mb-2 flex flex-col items-center gap-2">
+                  <p className="font-serif text-2xl md:text-3xl text-[#f5e6c8] drop-shadow-md">
+                    Dear {guestPrefix} {guestName},
+                  </p>
+                  <p className="text-[10px] tracking-[0.3em] text-[#f5e6c8]/70 uppercase">
+                    We Cordially Invite You
+                  </p>
+                </div>
+              ) : (
+                <p className="text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
+                  Unveil the moment
+                </p>
+              )}
             </motion.div>
 
             {/* Envelope stage */}
