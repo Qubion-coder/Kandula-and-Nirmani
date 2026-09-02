@@ -3,13 +3,14 @@ export type GoogleSheetFormType = 'rsvp' | 'wish';
 interface SubmitPayload {
   formType: GoogleSheetFormType;
   name: string;
+  attending?: string;
   guests?: string;
   dietary?: string;
   message?: string;
 }
 
 export async function submitToGoogleSheets(payload: SubmitPayload): Promise<void> {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbyGQvP6UN_neuooSvlQ7swa8l-iGBSRqmcR8OOreq8rk3oRdlB6F8b5QldAzzjNeXbJDw/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbyHipnENINk2CRBTkf7zyyxqOL5Mc-8z8fygjn-NLy5XA3wLouMnz5sPkIqw8tblEtKyA/exec';
 
   await fetch(scriptUrl, {
     method: 'POST',

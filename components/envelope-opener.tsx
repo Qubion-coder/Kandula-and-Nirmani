@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface EnvelopeOpenerProps {
@@ -66,7 +66,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.12),transparent_35%),linear-gradient(135deg,#2a060c_0%,#4a0f18_38%,#681322_65%,#2c0710_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.8),transparent_50%),linear-gradient(135deg,#ffffff_0%,#fff0f3_38%,#ffd6e0_65%,#fff0f3_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -173,7 +173,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 }}
               >
                 <div
-                  className="h-5 w-3 rounded-full bg-gradient-to-b from-[#f4d6da] via-[#e8a9b5] to-[#7d1a2f] shadow-[0_0_14px_rgba(255,220,220,0.18)]"
+                  className="h-5 w-3 rounded-full bg-gradient-to-b from-[#ffffff] via-[#ffd6e0] to-[#ff8fa3] shadow-[0_0_14px_rgba(255,220,220,0.5)]"
                   style={{
                     transform: `scale(${petal.scale}) rotate(18deg)`,
                     borderRadius: '70% 30% 70% 30% / 70% 30% 70% 30%',
@@ -203,22 +203,22 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             >
               <div className="mb-3 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-                <p className="text-[10px] uppercase tracking-[0.45em] text-[#f5e6c8]/80">
+                <p className="text-[10px] uppercase tracking-[0.45em] text-[#c97a8e]/90">
                   A Wedding Invitation
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
               </div>
               {guestName ? (
                 <div className="mt-4 mb-2 flex flex-col items-center gap-2">
-                  <p className="font-serif text-2xl md:text-3xl text-[#f5e6c8] drop-shadow-md">
+                  <p className="font-serif text-2xl md:text-3xl text-[#c97a8e] drop-shadow-sm">
                     Dear {guestPrefix} {guestName},
                   </p>
-                  <p className="text-[10px] tracking-[0.3em] text-[#f5e6c8]/70 uppercase">
+                  <p className="text-[10px] tracking-[0.3em] text-[#c97a8e]/80 uppercase">
                     We Cordially Invite You
                   </p>
                 </div>
               ) : (
-                <p className="text-[11px] tracking-[0.24em] text-[#f5e6c8]/70">
+                <p className="text-[11px] tracking-[0.24em] text-[#c97a8e]/80">
                   Unveil the moment
                 </p>
               )}
@@ -231,6 +231,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
               transition={{ duration: 1.1, ease: 'easeOut' }}
               className="relative"
             >
+
               <motion.div
                 className="absolute -inset-8 -z-20 rounded-[3rem] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(201,162,39,0.0),rgba(201,162,39,0.2),rgba(201,162,39,0.0),rgba(201,162,39,0.18),rgba(201,162,39,0.0))] blur-2xl"
                 animate={{ rotate: 360 }}
@@ -351,22 +352,28 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                   />
 
                   {/* Bottom section */}
-                  <div className="absolute inset-x-0 bottom-0 flex h-[58%] flex-col items-center justify-end px-8 pb-4 sm:pb-6 text-center">
+                  <div className="absolute inset-x-0 bottom-0 flex h-[62%] flex-col items-center justify-end px-8 pb-4 sm:pb-6 text-center">
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={!isOpen ? { opacity: 1 } : { opacity: 0 }}
                       transition={{ duration: 0.35 }}
-                      className="translate-y-4"
+                      className="translate-y-2 flex flex-col items-center"
                     >
-                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-[#6d1424] drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] flex items-center justify-center gap-4 sm:gap-6">
+                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-[#d9778c] drop-shadow-[0_1px_4px_rgba(255,255,255,0.8)] flex items-center justify-center gap-4 sm:gap-6 mt-6">
                         <span>KANDULA</span>
                         <span aria-hidden="true">&amp;</span>
                         <span>NIRMANI</span>
                       </h3>
-                      <div className="mt-4 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#C9A227]/50" />
-                        <span className="text-[#C9A227]">✦</span>
-                        <span className="h-px w-10 bg-[#C9A227]/50" />
+                      <div className="mt-5 flex items-center justify-center gap-3 text-[#d9778c]/70">
+                        <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#d9778c]/50" />
+                        {/* Simple Minimalist Flower Art */}
+                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 22V14" />
+                          <path d="M12 14C8 14 5 11 5 7.5S8 3 12 3s7 4.5 7 8-3 3.5-7 3.5z" />
+                          <path d="M12 14c-2.5 0-4.5 2-4.5 4.5S9.5 23 12 23s4.5-2 4.5-4.5S14.5 14 12 14z" />
+                          <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+                        </svg>
+                        <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#d9778c]/50" />
                       </div>
                     </motion.div>
                   </div>
@@ -379,9 +386,9 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       repeat: !isOpen ? Infinity : 0,
                       ease: 'easeInOut',
                     }}
-                    className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#f2d89c]/40 bg-[radial-gradient(circle_at_30%_30%,#a61d35_0%,#7a1226_55%,#5b0d1c_100%)] shadow-[0_10px_30px_rgba(90,13,28,0.45)]"
+                    className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#f2d89c]/40 bg-[radial-gradient(circle_at_30%_30%,#ffd6e0_0%,#ffb3c6_55%,#ff8fa3_100%)] shadow-[0_10px_30px_rgba(255,143,163,0.45)]"
                   >
-                    <span className="font-serif text-lg text-[#f5e6c8]">K ✦ N</span>
+                    <span className="font-serif text-lg text-white">K ✦ N</span>
                   </motion.div>
 
                   {/* Hover sheen */}
@@ -405,7 +412,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
                 transition={{ duration: 0.4 }}
-                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#f5e6c8]/80"
+                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#c97a8e]/90"
               >
                 Touch to Unveil
               </motion.p>

@@ -10,6 +10,7 @@ export default function RSVPSection() {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
   const [formData, setFormData] = useState({
     name: '',
+    attending: 'yes',
     guests: '1',
     dietary: '',
   });
@@ -35,6 +36,7 @@ export default function RSVPSection() {
       await submitToGoogleSheets({
         formType: 'rsvp',
         name: formData.name,
+        attending: formData.attending,
         guests: formData.guests,
         dietary: formData.dietary,
       });
@@ -42,7 +44,7 @@ export default function RSVPSection() {
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({ name: '', guests: '1', dietary: '' });
+        setFormData({ name: '', attending: 'yes', guests: '1', dietary: '' });
       }, 4000);
     } catch (error) {
       setSubmitError('Unable to submit right now. Please try again.');
@@ -182,22 +184,20 @@ export default function RSVPSection() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Guests Select */}
+                    {/* Attending Select */}
                     <div className="group relative">
                       <label className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c07a54]">
-                        <Users className="h-4 w-4" /> Guests
+                        <Heart className="h-4 w-4" /> Attending
                       </label>
                       <div className="relative">
                         <select
-                          name="guests"
-                          value={formData.guests}
+                          name="attending"
+                          value={formData.attending}
                           onChange={handleChange}
                           className="w-full appearance-none rounded-2xl border border-[#efdcc9] bg-white/65 px-5 py-4 pr-12 text-[#4a3b3c] outline-none transition-all duration-300 focus:border-[#c07a54] focus:bg-white focus:shadow-[0_10px_20px_rgba(192,122,84,0.12)] group-hover:bg-white/90 cursor-pointer"
                         >
-                          <option value="1">1 Guest (Just Me)</option>
-                          <option value="2">2 Guests (Couple)</option>
-                          <option value="3">3 Guests (Plus One)</option>
-                          <option value="4">4 Guests (Family)</option>
+                          <option value="yes">Joyfully Accepts</option>
+                          <option value="no">Regretfully Declines</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#c07a54]">
                           <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">

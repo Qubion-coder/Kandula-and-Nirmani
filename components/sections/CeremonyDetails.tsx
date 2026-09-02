@@ -19,8 +19,8 @@ export default function CeremonyDetails() {
       timeValue: '8:30 AM to 4:00 PM',
       timeSub: 'Reception and celebration',
       venueLabel: 'Function Venue',
-      venueValue: 'Hotel Green court',
-      venueSub: 'Live location available',
+      venueValue: 'Hotel Green Court',
+      venueSub: 'Banquet Hall : Emperors Court',
     },
   ];
 
@@ -198,8 +198,8 @@ export default function CeremonyDetails() {
                 <span className="w-6 h-[1px] bg-[#d58e67]"></span> Guest Notes
               </h4>
               <div className="space-y-2">
-                <p className="text-[#4d3732]/80 text-sm md:text-base"><span className="text-[#d58e67]">Dress Code:</span> Elegant Attire</p>
-                <p className="text-[#4d3732]/80 text-sm md:text-base"><span className="text-[#d58e67]">Reception:</span> 8:30 AM to 4:00 PM at Hotel Green court</p>
+                <p className="text-[#4d3732]/80 text-sm md:text-base"><span className="text-[#d58e67]">Dress Code:</span> White & Pastel Elegance</p>
+                <p className="text-[#4d3732]/80 text-sm md:text-base"><span className="text-[#d58e67]">Reception:</span> 8:30 AM to 4:00 PM at Hotel Green Court</p>
               </div>
             </motion.div>
 

@@ -76,11 +76,15 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.55 }}
-          className="mt-8 flex items-center gap-3 text-[#f0daaa]"
+          className="mt-8 flex items-center justify-center text-[#f0daaa]"
         >
-          <Sparkles className="h-4 w-4" />
-          <Heart className="h-4 w-4 fill-current" />
-          <Sparkles className="h-4 w-4" />
+          {/* Simple Minimalist Flower Art */}
+          <svg className="w-10 h-10 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22V14" />
+            <path d="M12 14C8 14 5 11 5 7.5S8 3 12 3s7 4.5 7 8-3 3.5-7 3.5z" />
+            <path d="M12 14c-2.5 0-4.5 2-4.5 4.5S9.5 23 12 23s4.5-2 4.5-4.5S14.5 14 12 14z" />
+            <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+          </svg>
         </motion.div>
       </div>
     </section>

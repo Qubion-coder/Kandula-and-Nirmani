@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/g6oyNtHyeSor7Uwx6';
 const FUNCTION_LOCATION_URL = 'https://maps.app.goo.gl/g6oyNtHyeSor7Uwx6';
@@ -82,40 +83,14 @@ export default function VenueLocation() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-[#f2ddc5] bg-white/65 shadow-[0_16px_50px_rgba(184,126,89,0.2)] backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,197,210,0.5),transparent_40%),radial-gradient(circle_at_80%_75%,rgba(226,205,255,0.55),transparent_35%)]" />
-
-            <div
-              className="absolute inset-0 opacity-35"
-              style={{
-                backgroundImage:
-                  'linear-gradient(rgba(212,150,103,0.55) 1px, transparent 1px), linear-gradient(90deg, rgba(212,150,103,0.55) 1px, transparent 1px)',
-                backgroundSize: '42px 42px',
-              }}
+            <Image 
+              src="/hotel.jpg"
+              alt="Hotel Green Court"
+              fill
+              className="object-contain object-center p-4 pb-[100px] sm:pb-[120px]"
+              sizes="(max-width: 1024px) 100vw, 66vw"
             />
-
-            <div className="absolute inset-0 hidden md:block opacity-55 text-[#c68461]">
-              <svg width="100%" height="100%" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M90 420 C200 300, 340 300, 470 370 C610 450, 750 440, 900 320" stroke="currentColor" strokeWidth="6" strokeDasharray="10 12" />
-                <path d="M100 520 C260 430, 390 470, 520 540 C670 620, 820 600, 930 500" stroke="currentColor" strokeWidth="3" strokeDasharray="6 10" />
-              </svg>
-            </div>
-
-            <div className="absolute left-1/2 top-[48%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
-              <motion.div
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/90 bg-white/85 shadow-[0_0_35px_rgba(201,121,138,0.4)]"
-              >
-                <MapPin className="h-10 w-10 text-[#d55374]" />
-                <div className="absolute bottom-[-6px] h-3 w-3 rounded-full bg-[#d55374] shadow-[0_0_12px_#d55374]" />
-              </motion.div>
-              <div className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full border border-[#dba6b5]/80" />
-              <motion.div
-                animate={{ scale: [1, 2.5], opacity: [0.75, 0] }}
-                transition={{ duration: 2.3, repeat: Infinity, ease: 'easeOut' }}
-                className="absolute top-1/2 -z-10 h-24 w-24 -translate-y-1/2 rounded-full bg-[#e3aab8]"
-              />
-            </div>
+            <div className="absolute inset-0 bg-black/10" />
 
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/95 to-transparent p-4 pt-16 sm:p-6 md:p-8">
               <a

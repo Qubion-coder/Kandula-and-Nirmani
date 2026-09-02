@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Location() {
   const { ref, inView } = useInView({
@@ -68,7 +69,7 @@ export default function Location() {
                   className="text-2xl font-serif font-light"
                   style={{ color: 'var(--primary)' }}
                 >
-                  Golden Rose Hotel
+                  Hotel Green Court
                 </h3>
                 <p className="text-foreground font-light leading-relaxed">
                   123 Colombo Road, Colombo 3, Sri Lanka
@@ -94,7 +95,7 @@ export default function Location() {
                   Ceremony
                 </p>
                 <p className="text-lg font-light text-foreground">
-                  10:30 AM - Grand Ballroom
+                  10:30 AM - Emperors Court
                 </p>
               </div>
 
@@ -106,7 +107,7 @@ export default function Location() {
                   Reception
                 </p>
                 <p className="text-lg font-light text-foreground">
-                  12:00 PM - Diamond Hall
+                  12:00 PM - Emperors Court
                 </p>
               </div>
 
@@ -118,13 +119,13 @@ export default function Location() {
                   Dress Code
                 </p>
                 <p className="text-lg font-light text-foreground">
-                  Elegant Formal Attire
+                  White & Pastel Elegance
                 </p>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Map placeholder */}
+          {/* Hotel Image */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
@@ -135,32 +136,14 @@ export default function Location() {
                 '0 20px 50px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.08)',
             }}
           >
-            {/* Map background */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `linear-gradient(135deg, var(--champagne) 0%, var(--ivory) 100%)`,
-              }}
+            <Image 
+              src="/hotel.jpg"
+              alt="Hotel Green Court"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-
-            {/* Map placeholder with location marker */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <motion.div
-                  className="text-6xl mb-4"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  📍
-                </motion.div>
-                <p className="text-lg font-serif text-foreground mb-4">
-                  Golden Rose Hotel
-                </p>
-                <p className="text-sm font-light text-muted">
-                  Colombo, Sri Lanka
-                </p>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-black/10" />
 
             {/* Gold border */}
             <div
@@ -188,7 +171,7 @@ export default function Location() {
           className="mt-12 text-center"
         >
           <p className="text-lg font-light text-foreground max-w-2xl mx-auto">
-            Set in the heart of Colombo, the Golden Rose Hotel offers an
+            Set in the heart of Colombo, Hotel Green Court offers an
             enchanting ambiance perfect for celebrating love. We look forward to
             welcoming you to our special day.
           </p>
