@@ -29,6 +29,10 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
 
     setIsAnimating(true);
     setIsOpen(true);
+    
+    // Dispatch event to trigger music play. This happens directly inside the click handler,
+    // which satisfies mobile browser autoplay policies.
+    window.dispatchEvent(new Event('start-music'));
 
     setTimeout(() => {
       setShowContent(true);

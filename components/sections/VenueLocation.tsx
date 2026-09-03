@@ -84,7 +84,7 @@ export default function VenueLocation() {
             className="relative h-[320px] w-full overflow-hidden rounded-[2rem] border border-[#f2ddc5] bg-white/65 shadow-[0_16px_50px_rgba(184,126,89,0.2)] backdrop-blur-xl sm:h-[420px] md:h-[500px] lg:col-span-8"
           >
             <Image 
-              src="/hotel.jpg"
+              src="/hotel new.jpg"
               alt="Hotel Green Court"
               fill
               className="object-contain object-center p-4 pb-[100px] sm:pb-[120px]"

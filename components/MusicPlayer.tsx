@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Volume2, VolumeX } from 'lucide-react';
 
 const SONG_SRC = '/young-and-beautiful.mp3';
 
@@ -35,9 +36,15 @@ export default function MusicPlayer() {
                                 setShowHint(false);
                             })
                             .catch(() => { });
-                        removeListeners();
                     };
 
+                    const handleStartMusic = () => {
+                        startOnInteraction();
+                    };
+
+                    // Listen for global custom event (which can be dispatched synchronously from click handlers)
+                    window.addEventListener('start-music', handleStartMusic, { once: true });
+                    
                     const removeListeners = () => {
                         ['click', 'touchstart', 'scroll'].forEach((evt) =>
                             document.removeEventListener(evt, startOnInteraction)
@@ -47,6 +54,8 @@ export default function MusicPlayer() {
                     ['click', 'touchstart', 'scroll'].forEach((evt) =>
                         document.addEventListener(evt, startOnInteraction, { once: true, passive: true })
                     );
+                    
+                    // Cleanup function will be handled when component unmounts
                 });
         };
 
@@ -57,18 +66,6 @@ export default function MusicPlayer() {
             audio.src = '';
         };
     }, []);
-
-    const toggle = useCallback(() => {
-        const audio = audioRef.current;
-        if (!audio) return;
-        if (isPlaying) {
-            audio.pause();
-            setIsPlaying(false);
-        } else {
-            audio.play().then(() => setIsPlaying(true)).catch(() => { });
-            setShowHint(false);
-        }
-    }, [isPlaying]);
 
     if (!mounted) return null;
 

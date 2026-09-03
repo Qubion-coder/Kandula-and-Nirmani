@@ -137,7 +137,7 @@ export default function Location() {
             }}
           >
             <Image 
-              src="/hotel.jpg"
+              src="/hotel new.jpg"
               alt="Hotel Green Court"
               fill
               className="object-cover"
