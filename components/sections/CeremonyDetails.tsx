@@ -27,18 +27,18 @@ export default function CeremonyDetails() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fffaf4_0%,#ffebee_45%,#fffaf4_100%)] px-4 sm:px-6 lg:px-8 py-24 md:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#3E0B16_0%,#2C070C_45%,#3E0B16_100%)] px-4 sm:px-6 lg:px-8 py-24 md:py-32"
     >
       {/* Background Ornaments */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 h-full w-full opacity-[0.07] mix-blend-screen"
           style={{ backgroundImage: `radial-gradient(circle at 20px 20px, #C9A227 1.1px, transparent 1.1px)`, backgroundSize: '36px 36px' }} />
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#3E0B16]/10 blur-[100px]" />
+        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#fdf8f0]/5 blur-[100px]" />
         <div className="absolute right-0 bottom-0 h-[40rem] w-[40rem] rounded-full bg-[#d81b3f]/10 blur-[120px]" />
         <motion.div
           animate={{ y: [0, -22, 0], x: [0, 18, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-10 right-12 h-40 w-40 rounded-full border border-[#3E0B16]/30 bg-[#3E0B16]/10 blur-[1px]"
+          className="absolute top-10 right-12 h-40 w-40 rounded-full border border-[#fdf8f0]/20 bg-[#fdf8f0]/5 blur-[1px]"
         />
       </div>
 
@@ -55,10 +55,10 @@ export default function CeremonyDetails() {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border border-[#3E0B16]/60 shadow-[0_20px_50px_rgba(201,162,39,0.2)] bg-[linear-gradient(180deg,#fff_0%,#fffaf4_55%,#ffebee_100%)]"
+              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border border-[#fdf8f0]/35 shadow-[0_20px_50px_rgba(201,162,39,0.2)] bg-[linear-gradient(180deg,#3E0B16_0%,#2C070C_55%,#3E0B16_100%)]"
             >
-              <div className="absolute -inset-6 rounded-t-[220px] rounded-b-[40px] border border-[#3E0B16]/20 hidden md:block" />
-              <div className="absolute -inset-3 rounded-t-[210px] rounded-b-[35px] border border-[#3E0B16]/40 hidden md:block" />
+              <div className="absolute -inset-6 rounded-t-[220px] rounded-b-[40px] border border-[#fdf8f0]/15 hidden md:block" />
+              <div className="absolute -inset-3 rounded-t-[210px] rounded-b-[35px] border border-[#fdf8f0]/25 hidden md:block" />
 
               <Image
                 src="/img/7.jpg"
@@ -74,29 +74,29 @@ export default function CeremonyDetails() {
               <div className="absolute inset-0 opacity-[0.14]"
                 style={{ backgroundImage: 'linear-gradient(rgba(201,162,39,0.55) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,0.55) 1px, transparent 1px)', backgroundSize: '38px 38px' }} />
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-8 text-center text-[#3E0B16]">
+              <div className="relative z-10 flex h-full flex-col items-center justify-center px-8 text-center text-[#fdf8f0]">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#f0d18b]/40 bg-black/25 px-4 py-1.5 backdrop-blur-sm">
                   <Cross className="h-3.5 w-3.5 text-[#f4ddab]" />
                   <p className="text-[10px] uppercase tracking-[0.32em] text-[#f6dd9a] drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]">Blessed Union</p>
                 </div>
-                <h3 className="mt-5 font-serif text-4xl text-[#3E0B16] drop-shadow-[0_4px_16px_rgba(0,0,0,0.75)]">
-                  KANDULA <span className="text-[#3E0B16]">&amp;</span> NIRMANI
+                <h3 className="mt-5 font-serif text-4xl text-[#fdf8f0] drop-shadow-[0_4px_16px_rgba(0,0,0,0.75)]">
+                  KANDULA <span className="text-[#d58e67]">&amp;</span> NIRMANI
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[#3E0B16]/80">
+                <p className="mt-4 text-sm leading-7 text-[#fdf8f0]/80">
                   "Love is patient, love is kind." Join us as we exchange vows in faith, gratitude, and joy.
                 </p>
-                <div className="mt-8 h-px w-28 bg-[#3E0B16]/50" />
-                <p className="mt-5 text-xs uppercase tracking-[0.28em] text-[#3E0B16]">September 20, 2026</p>
+                <div className="mt-8 h-px w-28 bg-[#d58e67]/50" />
+                <p className="mt-5 text-xs uppercase tracking-[0.28em] text-[#d58e67]">September 20, 2026</p>
               </div>
 
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-2 sm:-right-6 md:-right-10 top-20 md:top-40 flex h-24 w-24 md:h-28 md:w-28 items-center justify-center rounded-full border border-[#3E0B16]/40 bg-white/80 shadow-[0_0_30px_rgba(201,162,39,0.3)] backdrop-blur-md"
+                className="absolute -right-2 sm:-right-6 md:-right-10 top-20 md:top-40 flex h-24 w-24 md:h-28 md:w-28 items-center justify-center rounded-full border border-[#fdf8f0]/25 bg-[#fdf8f0]/10 shadow-[0_0_30px_rgba(201,162,39,0.3)] backdrop-blur-md"
               >
                 <div className="text-center">
-                  <Heart className="mx-auto h-6 w-6 md:h-8 md:w-8 text-[#3E0B16] fill-[#C9A227]/20" />
-                  <span className="mt-2 block text-[10px] font-medium uppercase tracking-[0.25em] text-[#3E0B16]">Forever</span>
+                  <Heart className="mx-auto h-6 w-6 md:h-8 md:w-8 text-[#d58e67] fill-[#C9A227]/20" />
+                  <span className="mt-2 block text-[10px] font-medium uppercase tracking-[0.25em] text-[#fdf8f0]">Forever</span>
                 </div>
               </motion.div>
 
@@ -109,7 +109,7 @@ export default function CeremonyDetails() {
               <motion.div
                 animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.8, 0.3] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute right-20 bottom-32 h-4 w-4 rounded-full bg-[#3E0B16] blur-[2px]"
+                className="absolute right-20 bottom-32 h-4 w-4 rounded-full bg-[#d58e67] blur-[2px]"
               />
             </motion.div>
           </motion.div>
@@ -121,19 +121,19 @@ export default function CeremonyDetails() {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#3E0B16]/30 bg-white/50 px-5 py-2 backdrop-blur-sm">
-              <Sparkles className="h-4 w-4 text-[#3E0B16]" />
-              <span className="text-xs uppercase tracking-[0.3em] text-[#3E0B16] font-medium">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#fdf8f0]/20 bg-[#fdf8f0]/10 px-5 py-2 backdrop-blur-sm">
+              <Sparkles className="h-4 w-4 text-[#d58e67]" />
+              <span className="text-xs uppercase tracking-[0.3em] text-[#d58e67] font-medium">
                 The Celebration
               </span>
             </div>
 
-            <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-[#3E0B16] md:text-7xl">
+            <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-[#fdf8f0] md:text-7xl">
               Wedding <br />
-              <span className="italic text-[#3E0B16]">Reception</span>
+              <span className="italic text-[#d58e67]">Reception</span>
             </h2>
 
-            <p className="mb-12 text-lg leading-relaxed text-[#3E0B16]/70 max-w-lg">
+            <p className="mb-12 text-lg leading-relaxed text-[#fdf8f0]/70 max-w-lg">
               With immense joy in our hearts, we invite you to share our happiness as we celebrate our marriage. Join us for a beautiful celebration of love and lifelong commitment.
             </p>
 
@@ -146,36 +146,36 @@ export default function CeremonyDetails() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                     whileHover={{ x: 10, backgroundColor: 'rgba(201,162,39,0.08)' }}
-                    className="group relative overflow-hidden rounded-2xl border border-[#3E0B16]/25 bg-[linear-gradient(120deg,rgba(255,255,255,0.72)_0%,rgba(255,245,232,0.8)_100%)] p-5 shadow-lg backdrop-blur-md transition-all cursor-default"
+                    className="group relative overflow-hidden rounded-2xl border border-[#fdf8f0]/15 bg-[linear-gradient(120deg,rgba(44,7,12,0.6)_0%,rgba(62,11,22,0.8)_100%)] p-5 shadow-lg backdrop-blur-md transition-all cursor-default"
                   >
-                    <div className="absolute left-0 top-0 w-1 h-full bg-[#3E0B16] scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
+                    <div className="absolute left-0 top-0 w-1 h-full bg-[#d58e67] scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
 
                     <div className="mb-4">
-                      <p className="text-xs uppercase tracking-[0.25em] text-[#3E0B16]/70">{group.title} Details</p>
+                      <p className="text-xs uppercase tracking-[0.25em] text-[#d58e67]/70">{group.title} Details</p>
                     </div>
 
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
-                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#3E0B16]/30 bg-gradient-to-br from-[#ffebee] to-[#fffaf4] shadow-inner">
-                          <Clock3 className="h-5 w-5 text-[#3E0B16]" />
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#fdf8f0]/20 bg-gradient-to-br from-[#2C070C] to-[#3E0B16] shadow-inner">
+                          <Clock3 className="h-5 w-5 text-[#d58e67]" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-[#3E0B16]/70 mb-1">{group.timeLabel}</p>
-                          <h3 className="font-serif text-2xl text-[#3E0B16]">{group.timeValue}</h3>
-                          <p className="text-sm text-[#3E0B16]/50 mt-1">{group.timeSub}</p>
+                          <p className="text-xs uppercase tracking-[0.25em] text-[#d58e67]/70 mb-1">{group.timeLabel}</p>
+                          <h3 className="font-serif text-2xl text-[#fdf8f0]">{group.timeValue}</h3>
+                          <p className="text-sm text-[#fdf8f0]/50 mt-1">{group.timeSub}</p>
                         </div>
                       </div>
 
-                      <div className="h-px w-full bg-[#3E0B16]/20" />
+                      <div className="h-px w-full bg-[#d58e67]/20" />
 
                       <div className="flex items-start gap-4">
-                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#3E0B16]/30 bg-gradient-to-br from-[#ffebee] to-[#fffaf4] shadow-inner">
-                          <MapPin className="h-5 w-5 text-[#3E0B16]" />
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#fdf8f0]/20 bg-gradient-to-br from-[#2C070C] to-[#3E0B16] shadow-inner">
+                          <MapPin className="h-5 w-5 text-[#d58e67]" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-[#3E0B16]/70 mb-1">{group.venueLabel}</p>
-                          <h3 className="font-serif text-2xl text-[#3E0B16]">{group.venueValue}</h3>
-                          <p className="text-sm text-[#3E0B16]/50 mt-1">{group.venueSub}</p>
+                          <p className="text-xs uppercase tracking-[0.25em] text-[#d58e67]/70 mb-1">{group.venueLabel}</p>
+                          <h3 className="font-serif text-2xl text-[#fdf8f0]">{group.venueValue}</h3>
+                          <p className="text-sm text-[#fdf8f0]/50 mt-1">{group.venueSub}</p>
                         </div>
                       </div>
                     </div>
@@ -188,18 +188,18 @@ export default function CeremonyDetails() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 1, delay: 0.9 }}
-              className="mt-12 overflow-hidden rounded-2xl border border-[#3E0B16]/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.8),rgba(255,245,232,0.9))] p-6 shadow-2xl backdrop-blur-lg relative"
+              className="mt-12 overflow-hidden rounded-2xl border border-[#fdf8f0]/15 bg-[linear-gradient(135deg,rgba(44,7,12,0.8),rgba(62,11,22,0.9))] p-6 shadow-2xl backdrop-blur-lg relative"
             >
               <div className="absolute right-0 top-0 opacity-10">
-                <Crown className="w-32 h-32 -mt-8 -mr-8 text-[#3E0B16]" />
+                <Crown className="w-32 h-32 -mt-8 -mr-8 text-[#d58e67]" />
               </div>
 
-              <h4 className="text-xs uppercase tracking-widest text-[#3E0B16] mb-3 font-semibold flex items-center gap-2">
-                <span className="w-6 h-[1px] bg-[#3E0B16]"></span> Guest Notes
+              <h4 className="text-xs uppercase tracking-widest text-[#d58e67] mb-3 font-semibold flex items-center gap-2">
+                <span className="w-6 h-[1px] bg-[#d58e67]"></span> Guest Notes
               </h4>
               <div className="space-y-2">
-                <p className="text-[#3E0B16]/80 text-sm md:text-base"><span className="text-[#3E0B16]">Dress Code:</span> White & Pastel Elegance</p>
-                <p className="text-[#3E0B16]/80 text-sm md:text-base"><span className="text-[#3E0B16]">Reception:</span> 8:30 AM to 4:00 PM at Hotel Green Court</p>
+                <p className="text-[#fdf8f0]/80 text-sm md:text-base"><span className="text-[#d58e67]">Dress Code:</span> White & Pastel Elegance</p>
+                <p className="text-[#fdf8f0]/80 text-sm md:text-base"><span className="text-[#d58e67]">Reception:</span> 8:30 AM to 4:00 PM at Hotel Green Court</p>
               </div>
             </motion.div>
 
