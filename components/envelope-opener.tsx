@@ -66,7 +66,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
           className="fixed inset-0 z-50 overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.8),transparent_50%),linear-gradient(135deg,#ffffff_0%,#fff0f3_38%,#ffd6e0_65%,#fff0f3_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(62,11,22,0.8),transparent_50%),linear-gradient(135deg,#3E0B16_0%,#2C070C_38%,#1C0408_65%,#2C070C_100%)]" />
 
           {/* Soft ambient glow */}
           <motion.div
@@ -203,22 +203,22 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             >
               <div className="mb-3 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-                <p className="text-[10px] uppercase tracking-[0.45em] text-[#c97a8e]/90">
+                <p className="text-[10px] uppercase tracking-[0.45em] text-[#3E0B16]/90">
                   A Wedding Invitation
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
               </div>
               {guestName ? (
                 <div className="mt-4 mb-2 flex flex-col items-center gap-2">
-                  <p className="font-serif text-2xl md:text-3xl text-[#c97a8e] drop-shadow-sm">
+                  <p className="font-serif text-2xl md:text-3xl text-[#3E0B16] drop-shadow-sm">
                     Dear {guestPrefix} {guestName},
                   </p>
-                  <p className="text-[10px] tracking-[0.3em] text-[#c97a8e]/80 uppercase">
+                  <p className="text-[10px] tracking-[0.3em] text-[#3E0B16]/80 uppercase">
                     We Cordially Invite You
                   </p>
                 </div>
               ) : (
-                <p className="text-[11px] tracking-[0.24em] text-[#c97a8e]/80">
+                <p className="text-[11px] tracking-[0.24em] text-[#3E0B16]/80">
                   Unveil the moment
                 </p>
               )}
@@ -320,7 +320,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="rounded-full border border-white/20 p-4">
                         <svg
-                          className="h-10 w-10 text-white/75"
+                          className="h-10 w-10 text-[#3E0B16]/75"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -359,12 +359,12 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                       transition={{ duration: 0.35 }}
                       className="translate-y-2 flex flex-col items-center"
                     >
-                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-[#d9778c] drop-shadow-[0_1px_4px_rgba(255,255,255,0.8)] flex items-center justify-center gap-4 sm:gap-6 mt-6">
+                      <h3 className="font-serif text-[1.7rem] tracking-[0.14em] text-[#3E0B16] drop-shadow-[0_1px_4px_rgba(255,255,255,0.8)] flex items-center justify-center gap-4 sm:gap-6 mt-6">
                         <span>KANDULA</span>
                         <span aria-hidden="true">&amp;</span>
                         <span>NIRMANI</span>
                       </h3>
-                      <div className="mt-5 flex items-center justify-center gap-3 text-[#d9778c]/70">
+                      <div className="mt-5 flex items-center justify-center gap-3 text-[#3E0B16]/70">
                         <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#d9778c]/50" />
                         {/* Simple Minimalist Flower Art */}
                         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
@@ -388,7 +388,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                     }}
                     className="absolute left-1/2 top-[54%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#f2d89c]/40 bg-[radial-gradient(circle_at_30%_30%,#ffd6e0_0%,#ffb3c6_55%,#ff8fa3_100%)] shadow-[0_10px_30px_rgba(255,143,163,0.45)]"
                   >
-                    <span className="font-serif text-lg text-white">K ✦ N</span>
+                    <span className="font-serif text-lg text-[#3E0B16]">K ✦ N</span>
                   </motion.div>
 
                   {/* Hover sheen */}
@@ -412,7 +412,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
                 transition={{ duration: 0.4 }}
-                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#c97a8e]/90"
+                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#3E0B16]/90"
               >
                 Touch to Unveil
               </motion.p>
