@@ -203,22 +203,22 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
             >
               <div className="mb-3 flex items-center justify-center gap-4">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/70" />
-                <p className="text-[10px] uppercase tracking-[0.45em] text-[#3E0B16]/90">
+                <p className="text-[10px] uppercase tracking-[0.45em] text-[#C9A227]/90">
                   A Wedding Invitation
                 </p>
                 <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/70" />
               </div>
               {guestName ? (
                 <div className="mt-4 mb-2 flex flex-col items-center gap-2">
-                  <p className="font-serif text-2xl md:text-3xl text-[#3E0B16] drop-shadow-sm">
+                  <p className="font-serif text-2xl md:text-3xl text-[#fdf8f0] drop-shadow-sm">
                     Dear {guestPrefix} {guestName},
                   </p>
-                  <p className="text-[10px] tracking-[0.3em] text-[#3E0B16]/80 uppercase">
+                  <p className="text-[10px] tracking-[0.3em] text-[#fdf8f0]/80 uppercase">
                     We Cordially Invite You
                   </p>
                 </div>
               ) : (
-                <p className="text-[11px] tracking-[0.24em] text-[#3E0B16]/80">
+                <p className="text-[11px] tracking-[0.24em] text-[#C9A227]/80">
                   Unveil the moment
                 </p>
               )}
@@ -412,7 +412,7 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={!isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
                 transition={{ duration: 0.4 }}
-                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#3E0B16]/90"
+                className="mt-6 text-center text-[11px] uppercase tracking-[0.45em] text-[#C9A227]/90"
               >
                 Touch to Unveil
               </motion.p>
